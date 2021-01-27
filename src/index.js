@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+//import './index.css';
+
+const Game = (props) => {
+  return (
+    <div className="card">
+      <div className="card-body">
+        <h1>Hello World!!</h1>
+        <h2>{props.name}</h2>
+        <Button variant="outline-primary">プライマリーボタン</Button>
+        <Button variant="outline-secondary">セカンダリーボタン</Button>
+        <Button variant="outline-success">サクセスボタン</Button>
+        <Button variant="outline-dark">ダークボタン</Button>
+      </div>
+    </div>
+  );
+} 
+
+
+// ========================================
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Game name="Monaco" />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
